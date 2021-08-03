@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="report_personal_data"
+            string="البيانات الشخصية"
+            model="sec.personaldata"
+            report_type="qweb-pdf"
+            name="nucaerp.report_PersonalData"
+            file="nucaerp.report_PersonalData"
+            print_report_name="(object.name)"
+        />
+    </data>
+</odoo>

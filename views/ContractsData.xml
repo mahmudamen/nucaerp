@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<record id="contractsdata_table_form_view" model="ir.ui.view">
+            <field name="name">sec.contractsdata.form</field>
+            <field name="model">sec.contractsdata</field>
+            <field name="arch" type="xml">
+                <form string=" بيانات التعاقد">
+                                        <header>
+                        <button  id="active" name="action_active" string="نشط" class="btn-primary" type="object"/>
+                        <button  id="inactive" name="action_inactive" string="غير نشط" class="btn-primary" type="object"/>
+                        <field name="state" widget="statusbar" option="{'clickable':'1'}"/>
+                    </header>
+                    <sheet>
+                        <group  col="5">
+
+                                <field name="parties"  class="oe_inline" style=' max-width: 1150px;  width: 300px'/>
+                                <field name="approvaldate" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+
+                        </group>
+                        <group  col="5">
+                                    <field name="offernotenumber" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                                    <field name="datestartguard" class="oe_inline"   style=' max-width: 1150px;  width: 200px'/>
+                        </group>
+
+                            <group col="5">
+                             <field name="dateendguard" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            <field name="typecontract" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            </group>
+
+                        <group col="5">
+                            <field name="contracts" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="guardnumber" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                        </group>
+
+                        <group col="5">
+                            <field name="monthlyvalue" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="annualvalue" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                        </group>
+
+                        <group col="5">
+                            <field name="guardplace" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                        </group>
+                        <group>
+                            <field name="notes"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+<record id="contractsdata_table_tree_view" model="ir.ui.view">
+            <field name="name">sec.contractsdata.tree</field>
+            <field name="model">sec.contractsdata</field>
+            <field name="arch" type="xml">
+                <tree string="بيانات التعاقدات" multi_edit="1" duplicate="false">
+                    <field name="id" optional="hide"/>
+                    <field name="parties" optional="show"/>
+                    <field name="approvaldate" optional="show"/>
+                    <field name="offernotenumber" optional="show"/>
+                    <field name="datestartguard" optional="show"/>
+                    <field name="dateendguard" optional="show"/>
+                    <field name="typecontract" optional="show"/>
+                    <field name="contracts" optional="show"/>
+                    <field name="guardnumber" optional="show"/>
+                    <field name="monthlyvalue" optional="hide"/>
+                    <field name="annualvalue" optional="hide"/>
+                    <field name="notes" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

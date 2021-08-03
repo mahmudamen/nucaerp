@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="Socialstatus_table_form_view" model="ir.ui.view">
+            <field name="name">sec.socialstatus.form</field>
+            <field name="model">sec.socialstatus</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form string=" الحالة الاجتماعية">
+                                        <header>
+                        <button  id="active" name="action_active" string="نشط" class="btn-primary" type="object"/>
+                        <button  id="inactive" name="action_inactive" string="غير نشط" class="btn-primary" type="object"/>
+                        <field name="state" widget="statusbar" option="{'clickable':'1'}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="Socialstatus_tree_view" model="ir.ui.view">
+            <field name="name">sec.socialstatus.tree</field>
+            <field name="model">sec.socialstatus</field>
+            <field name="arch" type="xml">
+                <tree string="الحالة الاجتماعية" multi_edit="1">
+                    <field name="id"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <template id="report_PersonalData">
+            <t t-call="web.basic_layout">
+                    <t t-foreach="docs" t-as="doc">
+                        <h2>البيانات الشخصية</h2>
+                    <p>الاسم <span t-field="doc.name"/></p>
+                    </t>
+            </t>
+        </template>
+</odoo>

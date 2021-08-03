@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<record id="action_contract" model="ir.actions.act_window">
+   <field name="name">اكواد التعاقدات</field>
+   <field name="res_model">sec.contract</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+           اكواد التعاقدات
+       </p>
+   </field>
+</record>
+        <record id="action_parties" model="ir.actions.act_window">
+   <field name="name">اكواد الجهات</field>
+   <field name="res_model">sec.parties</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+           اكواد الجهات
+       </p>
+   </field>
+</record>
+<record id="action_socialstatus" model="ir.actions.act_window">
+   <field name="name">اكواد الحالة الاجتماعية</field>
+   <field name="res_model">sec.socialstatus</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+           اكواد الحالة الاجتماعية
+       </p>
+   </field>
+</record>
+<record id="action_functionalclass" model="ir.actions.act_window">
+   <field name="name">اكواد الدرجة الوظيفية</field>
+   <field name="res_model">sec.functionalclass</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+اكواد الدرجة الوظيفية
+       </p>
+   </field>
+</record>
+        <record id="action_wheel" model="ir.actions.act_window">
+   <field name="name">  اكواد الدولاب</field>
+   <field name="res_model">sec.wheel</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+اكواد الدولاب
+       </p>
+   </field>
+</record>
+ <record id="action_shelfs" model="ir.actions.act_window">
+   <field name="name">  اكواد الرف</field>
+   <field name="res_model">sec.shelfs</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+اكواد الرف
+       </p>
+   </field>
+</record>
+         <record id="action_followup" model="ir.actions.act_window">
+   <field name="name">  اكواد المتابعة</field>
+   <field name="res_model">sec.followup</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+اكواد المتابعة
+       </p>
+   </field>
+</record>
+<record id="action_job" model="ir.actions.act_window">
+   <field name="name">  اكواد الوظيفة</field>
+   <field name="res_model">sec.job</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+اكواد الوظيفة
+       </p>
+   </field>
+</record>
+        <record id="action_savelocation" model="ir.actions.act_window">
+   <field name="name">  مكان الحفظ </field>
+   <field name="res_model">sec.savelocation</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+مكان الحفظ
+       </p>
+   </field>
+</record>
+
+<record id="action_typecontact" model="ir.actions.act_window">
+   <field name="name">   نوع التعاقد </field>
+   <field name="res_model">sec.typecontact</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+نوع التعاقد
+       </p>
+   </field>
+</record>
+<record id="action_weapontype" model="ir.actions.act_window">
+   <field name="name">   نوع السلاح </field>
+   <field name="res_model">sec.weapontype</field>
+   <field name="view_mode">tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+نوع السلاح
+       </p>
+   </field>
+</record>
+
+<record id="action_personalData" model="ir.actions.act_window">
+   <field name="name">   البيانات الشخصية </field>
+   <field name="res_model">sec.personaldata</field>
+   <field name="view_mode">kanban,tree,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+البيانات الشخصية
+       </p>
+   </field>
+</record>
+        <record id="action_contractsData" model="ir.actions.act_window">
+   <field name="name">   بيانات التعاقدات </field>
+   <field name="res_model">sec.contractsdata</field>
+   <field name="view_mode">tree,kanban,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+بيانات التعاقدات
+       </p>
+   </field>
+</record>
+        <record id="action_weapon" model="ir.actions.act_window">
+   <field name="name">   بيانات السلاح </field>
+   <field name="res_model">sec.weapon</field>
+   <field name="view_mode">tree,kanban,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+بيانات السلاح
+       </p>
+   </field>
+</record>
+<record id="action_archive" model="ir.actions.act_window">
+   <field name="name">  الارشيف الالكتروني </field>
+   <field name="res_model">sec.archive</field>
+   <field name="view_mode">tree,kanban,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+الارشيف الالكتروني
+       </p>
+   </field>
+</record>
+<record id="action_wireless" model="ir.actions.act_window">
+   <field name="name">الاجهزة اللاسلكية</field>
+   <field name="res_model">sec.wireless</field>
+   <field name="view_mode">tree,kanban,form</field>
+   <field name="help" type="html">
+       <p class="o_view_nocontent_smiling_face">
+الاجهزة اللاسلكية
+       </p>
+   </field>
+</record>
+        <!-- -->
+         <menuitem id="sec" name="الامن"
+         sequence="2"/>
+        <!-- -->
+         <menuitem id="code"
+         name="اكواد"
+         parent="sec"
+         sequence="0"/>
+        <menuitem id="basicData"
+         name="البيانات "
+         parent="sec"
+         sequence="1"/>
+        <!-- -->
+         <menuitem id="code_contracts"
+         name=" اكواد التعاقدات"
+         parent="code"
+         action="action_contract"
+         sequence="1"/>
+         <menuitem id="code_parties"
+         name=" اكواد الجهات"
+         parent="code"
+         action="action_parties"
+         sequence="2"/>
+         <menuitem id="code_socialstatus"
+         name=" اكواد الحالة الاجتماعية"
+         parent="code"
+         action="action_socialstatus"
+         sequence="3"/>
+         <menuitem id="code_functionalclass"
+         name="اكواد الدرجة الوظيفية"
+         parent="code"
+         action="action_functionalclass"
+         sequence="4"/>
+         <menuitem id="code_wheel"
+         name="اكواد الدولاب"
+         parent="code"
+         action="action_wheel"
+         sequence="5"/>
+         <menuitem id="code_shelf"
+         name="اكواد الرف"
+         parent="code"
+         action="action_shelfs"
+         sequence="6"/>
+        <menuitem id="code_followup"
+         name="اكواد المتابعة"
+         parent="code"
+         action="action_followup"
+         sequence="7"/>
+         <menuitem id="code_job"
+         name="اكواد الوظيفة"
+         parent="code"
+         action="action_job"
+         sequence="8"/>
+        <menuitem id="code_savelocation"
+         name=" مكان الحفظ"
+         parent="code"
+         action="action_savelocation"
+         sequence="9"/>
+         <menuitem id="code_typecontact"
+         name=" نوع التعاقد"
+         parent="code"
+         action="action_typecontact"
+         sequence="10"/>
+         <menuitem id="code_weapontype"
+         name=" نوع السلاح"
+         parent="code"
+         action="action_weapontype"
+         sequence="11"/>
+
+         <menuitem id="code_personalData"
+         name=" البيانات الشخصية"
+         parent="basicData"
+         action="action_personalData"
+         sequence="0"/>
+         <menuitem id="code_contractsData"
+         name=" بيانات التعاقدات"
+         parent="basicData"
+         action="action_contractsData"
+         sequence="1"/>
+        <menuitem id="code_weapon"
+         name=" بيانات السلاح"
+         parent="basicData"
+         action="action_weapon"
+         sequence="2"/>
+        <menuitem id="code_archive"
+         name="الارشيف الالكتروني"
+         parent="basicData"
+         action="action_archive"
+         sequence="3"/>
+        <menuitem id="code_wireless"
+         name="الاجهزة اللاسلكية"
+         parent="basicData"
+         action="action_wireless"
+         sequence="4"/>
+    </data>
+</odoo>

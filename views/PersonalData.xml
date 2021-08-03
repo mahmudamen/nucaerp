@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="personaldata_table_form_view" model="ir.ui.view">
+            <field name="name">sec.personaldata.form</field>
+            <field name="model">sec.personaldata</field>
+            <field name="arch" type="xml">
+                <form string=" البيانات الشخصية">
+                                        <header>
+                        <button  id="active" name="action_active" string="نشط" class="btn-primary" type="object"/>
+                        <button  id="inactive" name="action_inactive" string="غير نشط" class="btn-primary" type="object"/>
+                        <field name="state" widget="statusbar" option="{'clickable':'1'}"/>
+                    </header>
+                    <sheet>
+
+                        <group>
+                             <field name="image_1920" widget="image" class="oe_right oe_avatar" />
+                        </group>
+
+                        <group  col="5">
+
+                                <field name="name"  class="oe_inline" style=' max-width: 1150px;  width: 300px'/>
+                                    <field name="birthdate" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+
+                        </group>
+                        <group  col="5">
+                                    <field name="nationalid" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                                    <field name="parties" class="oe_inline" widget="many2onebutton" style=' max-width: 1150px;  width: 200px'/>
+                        </group>
+
+                            <group col="5">
+                             <field name="hiringdate" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            <field name="functionalclass" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            </group>
+
+                        <group col="5">
+                            <field name="job" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="qualification" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                        </group>
+
+                        <group col="5">
+                            <field name="socialstatus" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="transporter" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                        </group>
+
+                        <group col="5">
+                            <field name="transporterdate" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                            <field name="transporterid" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                        </group>
+
+                        <group>
+                            <field name="confidentialreports" style=' max-width: 1150px;  width: 250px'/>
+                        </group>
+                        <group>
+                             <field name="Sanctions"/>
+                        </group>
+                        <group>
+                           <field name="address"/>
+                        </group>
+                        <group col="5">
+                            <field name="homephone" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="mobile" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                        </group>
+                        <group col="5">
+                            <field name="approvalnu" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            <field name="approvaldate" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                        </group>
+                        <group>
+                            <field name="documents" style=' max-width: 1150px;  width: 100px'/>
+                        </group>
+
+                        <group>
+                            <field name="notes"/>
+                        </group>
+                        <notebook position="inside">
+                        <page string="البيانات الاساسية">
+                            <!-- you can display child data like code below -->
+                            <field name="basicdata">
+                                <tree>
+                        <field name="basicdata_id" invisible="1"/>
+                        <field name="fileno" style=' max-width: 1150px;  width: 100px'/>
+                        <field name="followupstatus" style=' max-width: 1150px;  width: 200px'/>
+                        <field name="followupdate" style=' max-width: 1150px;  width: 100px'/>
+                                </tree>
+                                <form>
+                                    <group>
+                                       <field name="fileno" style=' max-width: 1150px;  width: 100px'/>
+                                    </group>
+                                    <group>
+                                       <field name="followupstatus" style=' max-width: 1150px;  width: 200px'/>
+                                    </group>
+                                    <group>
+                                       <field name="followupdate" style=' max-width: 1150px;  width: 100px'/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                            <page string="تفاصيل">
+                            <field name="basicdatadetail">
+                                <tree>
+                                    <field name="basicdatadetail_id" invisible="1"/>
+                                    <field name="date"/>
+                                    <field name="decision"/>
+                                    <field name="transporter"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                       <field name="date" style=' max-width: 1150px;  width: 100px'/>
+                                    </group>
+                                    <group>
+                                       <field name="decision" style=' max-width: 1150px;  width: 200px'/>
+                                    </group>
+                                    <group>
+                                       <field name="transporter" style=' max-width: 1150px;  width: 100px'/>
+                                    </group>
+                                </form>
+                            </field>
+                            </page>
+                    </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="personaldata_table_tree_view" model="ir.ui.view">
+            <field name="name">sec.personaldata.tree</field>
+            <field name="model">sec.personaldata</field>
+            <field name="arch" type="xml">
+                <tree string="البيانات الشخصية" multi_edit="1" duplicate="false">
+                    <field name="id" optional="hide"/>
+                    <field name="name" optional="show"/>
+                    <field name="birthdate" optional="show"/>
+                    <field name="nationalid" optional="hide"/>
+                    <field name="parties" optional="hide"/>
+                    <field name="hiringdate" optional="hide"/>
+                    <field name="functionalclass" optional="hide"/>
+                    <field name="job" optional="show"/>
+                    <field name="qualification" optional="hide"/>
+                    <field name="socialstatus" optional="hide"/>
+                    <field name="transporter" optional="hide"/>
+                    <field name="transporterdate" optional="hide"/>
+                    <field name="transporterid" optional="hide"/>
+                    <field name="confidentialreports" optional="hide"/>
+                    <field name="Sanctions" optional="hide"/>
+                    <field name="address" optional="hide"/>
+                    <field name="homephone" optional="hide"/>
+                    <field name="mobile" optional="show"/>
+                    <field name="notes" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="personaldata_kanban_view" model="ir.ui.view">
+            <field name="name">personaldata Kanban</field>
+            <field name="model">sec.personaldata</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="job"/>
+                    <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <img t-att-src="kanban_image('sec.personaldata', 'image_1920', record.id.raw_value)" alt="personaldata" class="o_image_64_contain"/>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="name"/>
+
+                                    </strong>
+                                    <ul>
+                                        <li><strong>الوظيفة: <field name="job"></field></strong></li>
+                                    </ul>
+                                    <div name="tags"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

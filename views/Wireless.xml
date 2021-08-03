@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<record id="wireless_table_form_view" model="ir.ui.view">
+            <field name="name">sec.wireless.form</field>
+            <field name="model">sec.wireless</field>
+            <field name="arch" type="xml">
+                <form string="الاجهزة اللاسلكية">
+                                        <header>
+                        <button  id="active" name="action_active" string="نشط" class="btn-primary" type="object"/>
+                        <button  id="inactive" name="action_inactive" string="غير نشط" class="btn-primary" type="object"/>
+                        <field name="state" widget="statusbar" option="{'clickable':'1'}"/>
+                    </header>
+                    <sheet>
+                        <group  col="5">
+                            <field name="parties"  class="oe_inline" style=' max-width: 1150px;  width: 300px'/>
+                            <field name="brand" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                        </group>
+                        <group  col="5">
+                            <field name="devicestatus" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="devicenumber" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                        </group>
+                            <group col="5">
+                             <field name="deviceserial" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            <field name="deviceuser" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            </group>
+                        <group col="5">
+                            <field name="letternumber" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="letterdate" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                        </group>
+                        <group>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+<record id="wireless_table_tree_view" model="ir.ui.view">
+            <field name="name">sec.wireless.tree</field>
+            <field name="model">sec.wireless</field>
+            <field name="arch" type="xml">
+                <tree string="الاجهزة اللاسلكية" multi_edit="1" duplicate="false">
+                    <field name="id" optional="hide"/>
+                    <field name="parties" optional="show"/>
+                    <field name="brand" optional="show"/>
+                    <field name="devicestatus" optional="hide"/>
+                    <field name="devicenumber" optional="hide"/>
+                    <field name="deviceserial" optional="hide"/>
+                    <field name="deviceuser" optional="hide"/>
+                    <field name="letternumber" optional="show"/>
+                    <field name="letterdate" optional="hide"/>
+                    <field name="notes" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

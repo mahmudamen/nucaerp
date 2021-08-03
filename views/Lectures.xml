@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="Lectures_table_form_view" model="ir.ui.view">
+            <field name="name">sec.lectures.form</field>
+            <field name="model">sec.lectures</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form string=" المحاضرات">
+                                        <header>
+                        <button  id="active" name="action_active" string="نشط" class="btn-primary" type="object"/>
+                        <button  id="inactive" name="action_inactive" string="غير نشط" class="btn-primary" type="object"/>
+                        <field name="state" widget="statusbar" option="{'clickable':'1'}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="filename"/>
+                            <field name="subject"/>
+                            <field name="showDate"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="Lectures_table_tree_view" model="ir.ui.view">
+            <field name="name">sec.lectures.tree</field>
+            <field name="model">sec.lectures</field>
+            <field name="arch" type="xml">
+                <tree string="المحاضرات" multi_edit="1">
+                    <field name="id"/>
+                    <field name="filename"/>
+                    <field name="subject"/>
+                    <field name="showDate"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<record id="archive_table_form_view" model="ir.ui.view">
+            <field name="name">sec.archive.form</field>
+            <field name="model">sec.archive</field>
+            <field name="arch" type="xml">
+                <form string="الارشيف الالكتروني">
+                    <header>
+                        <button  id="active" name="action_active" string="نشط" class="btn-primary" type="object"/>
+                        <button  id="inactive" name="action_inactive" string="غير نشط" class="btn-primary" type="object"/>
+                        <field name="state" widget="statusbar" option="{'clickable':'1'}"/>
+                    </header>
+                    <sheet>
+                        <group  col="5">
+                            <field name="saveyear"  class="oe_inline" style=' max-width: 1150px;  width: 300px'/>
+                            <field name="parties" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                        </group>
+                        <group  col="5">
+                            <field name="cupboardnumber" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="shelfnumber" class="oe_inline"  style=' max-width: 1150px;  width: 200px'/>
+                        </group>
+                            <group col="5">
+                             <field name="filenumber" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            </group>
+                            <group>
+                                <field name="about" />
+                            </group>
+                        <group>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+<record id="archive_table_tree_view" model="ir.ui.view">
+            <field name="name">sec.archive.tree</field>
+            <field name="model">sec.archive</field>
+            <field name="arch" type="xml">
+                <tree string="الارشيف الالكتروني" multi_edit="1" duplicate="false">
+                    <field name="id" optional="hide"/>
+                    <field name="saveyear" optional="show"/>
+                    <field name="parties" optional="show"/>
+                    <field name="cupboardnumber" optional="hide"/>
+                    <field name="shelfnumber" optional="hide"/>
+                    <field name="filenumber" optional="hide"/>
+                    <field name="about" optional="hide"/>
+                    <field name="notes" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

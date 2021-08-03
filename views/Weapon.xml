@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<record id="weapon_table_form_view" model="ir.ui.view">
+            <field name="name">sec.weapon.form</field>
+            <field name="model">sec.weapon</field>
+            <field name="arch" type="xml">
+                <form string=" بيانات السلاح">
+                                        <header>
+                        <button  id="active" name="action_active" string="نشط" class="btn-primary" type="object"/>
+                        <button  id="inactive" name="action_inactive" string="غير نشط" class="btn-primary" type="object"/>
+                        <field name="state" widget="statusbar" option="{'clickable':'1'}"/>
+                    </header>
+                    <sheet>
+                        <group  col="5">
+                            <field name="parties"  class="oe_inline" style=' max-width: 1150px;  width: 300px'/>
+                            <field name="weapontype" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                        </group>
+                        <group  col="5">
+                            <field name="number" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="weaponnumber" class="oe_inline" widget="many2onebutton" style=' max-width: 1150px;  width: 200px'/>
+                        </group>
+                            <group col="5">
+                             <field name="weaponstate" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            <field name="weaponuser" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            </group>
+                        <group col="5">
+                            <field name="weaponplace" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="ammo" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                        </group>
+
+                        <group col="5">
+                            <field name="ammonumber" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                        </group>
+                        <group>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+<record id="weapon_table_tree_view" model="ir.ui.view">
+            <field name="name">sec.weapon.tree</field>
+            <field name="model">sec.weapon</field>
+            <field name="arch" type="xml">
+                <tree string="بيانات السلاح " multi_edit="1" duplicate="false">
+                    <field name="id" optional="hide"/>
+                    <field name="parties" optional="show"/>
+                    <field name="weapontype" optional="show"/>
+                    <field name="number" optional="hide"/>
+                    <field name="weaponnumber" optional="hide"/>
+                    <field name="weaponstate" optional="hide"/>
+                    <field name="weaponuser" optional="hide"/>
+                    <field name="weaponplace" optional="show"/>
+                    <field name="ammo" optional="hide"/>
+                    <field name="ammonumber" optional="hide"/>
+                    <field name="notes" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
