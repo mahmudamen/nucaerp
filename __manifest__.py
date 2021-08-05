@@ -27,6 +27,7 @@
         'security/ir.model.access.csv',
         'security/nucaerp.xml',
         'views/menu.xml',
+        'wizards/testwizard.xml',
         'views/Contract.xml',
         'views/Parties.xml',
         'views/Socialstatus.xml',

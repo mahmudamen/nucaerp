@@ -1,8 +1,10 @@
 from odoo import fields, models, api
 
 
-class ModelName(models.TransientModel):
-    _name = 'sec.TableName'
-    _description = 'Description'
+class TestWizard(models.TransientModel):
+    _name = 'sec.testwizard'
+    _description = 'Test Wizard'
 
-    name = fields.Char()
+    person_id = fields.Many2one('sec.personaldata',string='الموظف')
+    date = fields.Date('التاريخ')
+

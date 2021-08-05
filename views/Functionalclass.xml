@@ -7,12 +7,17 @@
             <field name="priority">1</field>
             <field name="arch" type="xml">
                 <form string=" الدرجة الوظيفية ">
-                                        <header>
+                    <header>
                         <button  id="active" name="action_active" string="نشط" class="btn-primary" type="object"/>
                         <button  id="inactive" name="action_inactive" string="غير نشط" class="btn-primary" type="object"/>
                         <field name="state" widget="statusbar" option="{'clickable':'1'}"/>
                     </header>
                     <sheet>
+                           <div name="button_box" class="oe_button_box" position="inside">
+                                <button class="oe_stat_button" type="object" name="get_person"  icon="/nucaerp/static/src/img/person.png">
+                                <field string="موظف" name="personal_count" widget="statinfo"/>
+                                </button>
+                           </div>
                         <group>
                             <field name="name"/>
                         </group>

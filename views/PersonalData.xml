@@ -6,10 +6,12 @@
             <field name="model">sec.personaldata</field>
             <field name="arch" type="xml">
                 <form string=" البيانات الشخصية">
-                                        <header>
+                    <header>
                         <button  id="active" name="action_active" string="نشط" class="btn-primary" type="object"/>
                         <button  id="inactive" name="action_inactive" string="غير نشط" class="btn-primary" type="object"/>
+
                         <field name="state" widget="statusbar" option="{'clickable':'1'}"/>
+
                     </header>
                     <sheet>
 
