@@ -28,6 +28,10 @@
                 <tree string="كود الرف" multi_edit="1">
                     <field name="id"/>
                     <field name="name"/>
+                                        <field name="state" invisible='1'/>
+<button name="state" string="نشط" icon="fa-check text-success" attrs="{'invisible': ['|',('state','=','inactive')]}" />
+<button name="state" string="غير نشط" icon="fa-times-circle text-danger" attrs="{'invisible': ['|',('state','=','active')]}" />
+
                 </tree>
             </field>
         </record>

@@ -27,22 +27,22 @@
                         </group>
                         <group  col="5">
                                     <field name="nationalid" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
-                                    <field name="parties" class="oe_inline" widget="many2onebutton" style=' max-width: 1150px;  width: 200px'/>
+                                    <field name="parties" domain="[('state','=','active')]" class="oe_inline" widget="many2onebutton" style=' max-width: 1150px;  width: 200px'/>
                         </group>
 
                             <group col="5">
                              <field name="hiringdate" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
-                            <field name="functionalclass" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
+                            <field name="functionalclass" domain="[('state','=','active')]" class="oe_inline" style=' max-width: 1150px;  width: 100px'/>
                             </group>
 
                         <group col="5">
-                            <field name="job" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
-                            <field name="qualification" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                            <field name="job" class="oe_inline" domain="[('state','=','active')]" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="qualification"  class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
                         </group>
 
                         <group col="5">
-                            <field name="socialstatus" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
-                            <field name="transporter" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
+                            <field name="socialstatus" domain="[('state','=','active')]" class="oe_inline" style=' max-width: 1150px;  width: 200px'/>
+                            <field name="transporter" domain="[('state','=','active')]" class="oe_inline" style=' max-width: 1150px;  width: 250px'/>
                         </group>
 
                         <group col="5">
@@ -148,6 +148,10 @@
                     <field name="homephone" optional="hide"/>
                     <field name="mobile" optional="show"/>
                     <field name="notes" optional="hide"/>
+                                        <field name="state" invisible='1'/>
+<button name="state" string="نشط" icon="fa-check text-success" attrs="{'invisible': ['|',('state','=','inactive')]}" />
+<button name="state" string="غير نشط" icon="fa-times-circle text-danger" attrs="{'invisible': ['|',('state','=','active')]}" />
+
                 </tree>
             </field>
         </record>
